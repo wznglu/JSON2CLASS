@@ -4,17 +4,14 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 public class WorldConfig
 {
     public Int32 WorldId { get; set; }
     public String WorldName { get; set; }
 }
-
 public class JsonNetSample : MonoBehaviour
 {
     public Text Output;
-
     void Start()
     {
         WriteLine("\nStart!\n");
@@ -36,7 +33,6 @@ public class JsonNetSample : MonoBehaviour
             WriteLine(WorldConfigs[i].WorldName);
         }
     }
-
   void WriteLine(string msg)
     {
         Output.text = Output.text + msg + "\n";
